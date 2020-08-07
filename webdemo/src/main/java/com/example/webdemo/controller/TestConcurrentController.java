@@ -36,4 +36,11 @@ public class TestConcurrentController {
         return resultData;
     }
 
+    @GetMapping("/testPath/{param}")
+    public ResultData testPathV(@PathVariable("param") String param){
+        System.out.println(param);
+        ResultData resultData = new ResultData();
+        return resultData;
+    }
+
 }
