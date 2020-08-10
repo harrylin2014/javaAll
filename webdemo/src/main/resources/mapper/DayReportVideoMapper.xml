@@ -1,0 +1,1548 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wglvzyx.mybatisredis.dao.DayReportVideoMapper" >
+  <resultMap id="BaseResultMap" type="com.wglvzyx.mybatisredis.entity.DayReportVideo" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="rq" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="bx_wflw_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="bx_wflw_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="bx_wflw_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="bx_lcfr_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="bx_lcfs_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="bx_lcfs_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_bgz_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_bgz_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_bgz_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_xlc_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_xlc_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_xlc_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_dbzh_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_dbzh_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_dbzh_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_ssxh_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_ssxh_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_ssxh_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_ls_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_ls_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_ls_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_hysc_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_hysc_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_hysc_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_zdxh_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_zdxh_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_zdxh_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_fgsxh_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_fgsxh_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_fgsxh_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_fdzw_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_fdzw_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_fdzw_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_hh_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_hh_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cfdq_hh_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_az_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_az_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_az_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_bgz_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_bgz_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_bgz_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_bts_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_bts_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_bts_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_cy_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_cy_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_cy_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_kblj_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_kblj_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_kblj_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e1_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e1_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e1_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e2_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e2_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e2_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e3_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e3_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e3_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e4_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e4_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_e4_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_h_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_h_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_h_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_lock_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_lock_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_lock_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_ls_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_ls_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_ls_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_hgwt_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_hgwt_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="xyj_hgwt_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_az_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_az_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_az_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_bgz_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_bgz_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_bgz_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_ysyc_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_ysyc_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_ysyc_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_wxh_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_wxh_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_wxh_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_wftp_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_wftp_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_wftp_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_ytws_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_ytws_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_ytws_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_xtkd_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_xtkd_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_xtkd_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_zdgj_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_zdgj_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_zdgj_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_yksl_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_yksl_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_yksl_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_yzqd_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_yzqd_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="cd_yzqd_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bzl_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bzl_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bzl_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bzr_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bzr_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bzr_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bkj_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bkj_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_bkj_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_yzy_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_yzy_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_yzy_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zrxgc_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zrxgc_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zrxgc_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zlxgc_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zlxgc_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zlxgc_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zdkgj_cs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zdkgj_rs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="kt_zdkgj_bfs" jdbcType="INTEGER" javaType="java.lang.Integer" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, rq, bx_wflw_cs, bx_wflw_rs, bx_wflw_bfs, bx_lcfr_cs, bx_lcfs_rs, bx_lcfs_bfs, 
+    cfdq_bgz_cs, cfdq_bgz_rs, cfdq_bgz_bfs, cfdq_xlc_cs, cfdq_xlc_rs, cfdq_xlc_bfs, cfdq_dbzh_cs, 
+    cfdq_dbzh_rs, cfdq_dbzh_bfs, cfdq_ssxh_cs, cfdq_ssxh_rs, cfdq_ssxh_bfs, cfdq_ls_cs, 
+    cfdq_ls_rs, cfdq_ls_bfs, cfdq_hysc_cs, cfdq_hysc_rs, cfdq_hysc_bfs, cfdq_zdxh_cs, 
+    cfdq_zdxh_rs, cfdq_zdxh_bfs, cfdq_fgsxh_cs, cfdq_fgsxh_rs, cfdq_fgsxh_bfs, cfdq_fdzw_cs, 
+    cfdq_fdzw_rs, cfdq_fdzw_bfs, cfdq_hh_cs, cfdq_hh_rs, cfdq_hh_bfs, xyj_az_cs, xyj_az_rs, 
+    xyj_az_bfs, xyj_bgz_cs, xyj_bgz_rs, xyj_bgz_bfs, xyj_bts_cs, xyj_bts_rs, xyj_bts_bfs, 
+    xyj_cy_cs, xyj_cy_rs, xyj_cy_bfs, xyj_kblj_cs, xyj_kblj_rs, xyj_kblj_bfs, xyj_e1_cs, 
+    xyj_e1_rs, xyj_e1_bfs, xyj_e2_cs, xyj_e2_rs, xyj_e2_bfs, xyj_e3_cs, xyj_e3_rs, xyj_e3_bfs, 
+    xyj_e4_cs, xyj_e4_rs, xyj_e4_bfs, xyj_h_cs, xyj_h_rs, xyj_h_bfs, xyj_lock_cs, xyj_lock_rs, 
+    xyj_lock_bfs, xyj_ls_cs, xyj_ls_rs, xyj_ls_bfs, xyj_hgwt_cs, xyj_hgwt_rs, xyj_hgwt_bfs, 
+    cd_az_cs, cd_az_rs, cd_az_bfs, cd_bgz_cs, cd_bgz_rs, cd_bgz_bfs, cd_ysyc_cs, cd_ysyc_rs, 
+    cd_ysyc_bfs, cd_wxh_cs, cd_wxh_rs, cd_wxh_bfs, cd_wftp_cs, cd_wftp_rs, cd_wftp_bfs, 
+    cd_ytws_cs, cd_ytws_rs, cd_ytws_bfs, cd_xtkd_cs, cd_xtkd_rs, cd_xtkd_bfs, cd_zdgj_cs, 
+    cd_zdgj_rs, cd_zdgj_bfs, cd_yksl_cs, cd_yksl_rs, cd_yksl_bfs, cd_yzqd_cs, cd_yzqd_rs, 
+    cd_yzqd_bfs, kt_bzl_cs, kt_bzl_rs, kt_bzl_bfs, kt_bzr_cs, kt_bzr_rs, kt_bzr_bfs, 
+    kt_bkj_cs, kt_bkj_rs, kt_bkj_bfs, kt_yzy_cs, kt_yzy_rs, kt_yzy_bfs, kt_zrxgc_cs, 
+    kt_zrxgc_rs, kt_zrxgc_bfs, kt_zlxgc_cs, kt_zlxgc_rs, kt_zlxgc_bfs, kt_zdkgj_cs, kt_zdkgj_rs, 
+    kt_zdkgj_bfs
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from haier_weixin_day_report_video
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from haier_weixin_day_report_video
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.wglvzyx.mybatisredis.entity.DayReportVideo" >
+    insert into haier_weixin_day_report_video (id, rq, bx_wflw_cs, 
+      bx_wflw_rs, bx_wflw_bfs, bx_lcfr_cs, 
+      bx_lcfs_rs, bx_lcfs_bfs, cfdq_bgz_cs, 
+      cfdq_bgz_rs, cfdq_bgz_bfs, cfdq_xlc_cs, 
+      cfdq_xlc_rs, cfdq_xlc_bfs, cfdq_dbzh_cs, 
+      cfdq_dbzh_rs, cfdq_dbzh_bfs, cfdq_ssxh_cs, 
+      cfdq_ssxh_rs, cfdq_ssxh_bfs, cfdq_ls_cs, 
+      cfdq_ls_rs, cfdq_ls_bfs, cfdq_hysc_cs, 
+      cfdq_hysc_rs, cfdq_hysc_bfs, cfdq_zdxh_cs, 
+      cfdq_zdxh_rs, cfdq_zdxh_bfs, cfdq_fgsxh_cs, 
+      cfdq_fgsxh_rs, cfdq_fgsxh_bfs, cfdq_fdzw_cs, 
+      cfdq_fdzw_rs, cfdq_fdzw_bfs, cfdq_hh_cs, 
+      cfdq_hh_rs, cfdq_hh_bfs, xyj_az_cs, 
+      xyj_az_rs, xyj_az_bfs, xyj_bgz_cs, 
+      xyj_bgz_rs, xyj_bgz_bfs, xyj_bts_cs, 
+      xyj_bts_rs, xyj_bts_bfs, xyj_cy_cs, 
+      xyj_cy_rs, xyj_cy_bfs, xyj_kblj_cs, 
+      xyj_kblj_rs, xyj_kblj_bfs, xyj_e1_cs, 
+      xyj_e1_rs, xyj_e1_bfs, xyj_e2_cs, 
+      xyj_e2_rs, xyj_e2_bfs, xyj_e3_cs, 
+      xyj_e3_rs, xyj_e3_bfs, xyj_e4_cs, 
+      xyj_e4_rs, xyj_e4_bfs, xyj_h_cs, 
+      xyj_h_rs, xyj_h_bfs, xyj_lock_cs, 
+      xyj_lock_rs, xyj_lock_bfs, xyj_ls_cs, 
+      xyj_ls_rs, xyj_ls_bfs, xyj_hgwt_cs, 
+      xyj_hgwt_rs, xyj_hgwt_bfs, cd_az_cs, 
+      cd_az_rs, cd_az_bfs, cd_bgz_cs, 
+      cd_bgz_rs, cd_bgz_bfs, cd_ysyc_cs, 
+      cd_ysyc_rs, cd_ysyc_bfs, cd_wxh_cs, 
+      cd_wxh_rs, cd_wxh_bfs, cd_wftp_cs, 
+      cd_wftp_rs, cd_wftp_bfs, cd_ytws_cs, 
+      cd_ytws_rs, cd_ytws_bfs, cd_xtkd_cs, 
+      cd_xtkd_rs, cd_xtkd_bfs, cd_zdgj_cs, 
+      cd_zdgj_rs, cd_zdgj_bfs, cd_yksl_cs, 
+      cd_yksl_rs, cd_yksl_bfs, cd_yzqd_cs, 
+      cd_yzqd_rs, cd_yzqd_bfs, kt_bzl_cs, 
+      kt_bzl_rs, kt_bzl_bfs, kt_bzr_cs, 
+      kt_bzr_rs, kt_bzr_bfs, kt_bkj_cs, 
+      kt_bkj_rs, kt_bkj_bfs, kt_yzy_cs, 
+      kt_yzy_rs, kt_yzy_bfs, kt_zrxgc_cs, 
+      kt_zrxgc_rs, kt_zrxgc_bfs, kt_zlxgc_cs, 
+      kt_zlxgc_rs, kt_zlxgc_bfs, kt_zdkgj_cs, 
+      kt_zdkgj_rs, kt_zdkgj_bfs)
+    values (#{id,jdbcType=INTEGER}, #{rq,jdbcType=VARCHAR}, #{bxWflwCs,jdbcType=INTEGER}, 
+      #{bxWflwRs,jdbcType=INTEGER}, #{bxWflwBfs,jdbcType=INTEGER}, #{bxLcfrCs,jdbcType=INTEGER}, 
+      #{bxLcfsRs,jdbcType=INTEGER}, #{bxLcfsBfs,jdbcType=INTEGER}, #{cfdqBgzCs,jdbcType=INTEGER}, 
+      #{cfdqBgzRs,jdbcType=INTEGER}, #{cfdqBgzBfs,jdbcType=INTEGER}, #{cfdqXlcCs,jdbcType=INTEGER}, 
+      #{cfdqXlcRs,jdbcType=INTEGER}, #{cfdqXlcBfs,jdbcType=INTEGER}, #{cfdqDbzhCs,jdbcType=INTEGER}, 
+      #{cfdqDbzhRs,jdbcType=INTEGER}, #{cfdqDbzhBfs,jdbcType=INTEGER}, #{cfdqSsxhCs,jdbcType=INTEGER}, 
+      #{cfdqSsxhRs,jdbcType=INTEGER}, #{cfdqSsxhBfs,jdbcType=INTEGER}, #{cfdqLsCs,jdbcType=INTEGER}, 
+      #{cfdqLsRs,jdbcType=INTEGER}, #{cfdqLsBfs,jdbcType=INTEGER}, #{cfdqHyscCs,jdbcType=INTEGER}, 
+      #{cfdqHyscRs,jdbcType=INTEGER}, #{cfdqHyscBfs,jdbcType=INTEGER}, #{cfdqZdxhCs,jdbcType=INTEGER}, 
+      #{cfdqZdxhRs,jdbcType=INTEGER}, #{cfdqZdxhBfs,jdbcType=INTEGER}, #{cfdqFgsxhCs,jdbcType=INTEGER}, 
+      #{cfdqFgsxhRs,jdbcType=INTEGER}, #{cfdqFgsxhBfs,jdbcType=INTEGER}, #{cfdqFdzwCs,jdbcType=INTEGER}, 
+      #{cfdqFdzwRs,jdbcType=INTEGER}, #{cfdqFdzwBfs,jdbcType=INTEGER}, #{cfdqHhCs,jdbcType=INTEGER}, 
+      #{cfdqHhRs,jdbcType=INTEGER}, #{cfdqHhBfs,jdbcType=INTEGER}, #{xyjAzCs,jdbcType=INTEGER}, 
+      #{xyjAzRs,jdbcType=INTEGER}, #{xyjAzBfs,jdbcType=INTEGER}, #{xyjBgzCs,jdbcType=INTEGER}, 
+      #{xyjBgzRs,jdbcType=INTEGER}, #{xyjBgzBfs,jdbcType=INTEGER}, #{xyjBtsCs,jdbcType=INTEGER}, 
+      #{xyjBtsRs,jdbcType=INTEGER}, #{xyjBtsBfs,jdbcType=INTEGER}, #{xyjCyCs,jdbcType=INTEGER}, 
+      #{xyjCyRs,jdbcType=INTEGER}, #{xyjCyBfs,jdbcType=INTEGER}, #{xyjKbljCs,jdbcType=INTEGER}, 
+      #{xyjKbljRs,jdbcType=INTEGER}, #{xyjKbljBfs,jdbcType=INTEGER}, #{xyjE1Cs,jdbcType=INTEGER}, 
+      #{xyjE1Rs,jdbcType=INTEGER}, #{xyjE1Bfs,jdbcType=INTEGER}, #{xyjE2Cs,jdbcType=INTEGER}, 
+      #{xyjE2Rs,jdbcType=INTEGER}, #{xyjE2Bfs,jdbcType=INTEGER}, #{xyjE3Cs,jdbcType=INTEGER}, 
+      #{xyjE3Rs,jdbcType=INTEGER}, #{xyjE3Bfs,jdbcType=INTEGER}, #{xyjE4Cs,jdbcType=INTEGER}, 
+      #{xyjE4Rs,jdbcType=INTEGER}, #{xyjE4Bfs,jdbcType=INTEGER}, #{xyjHCs,jdbcType=INTEGER}, 
+      #{xyjHRs,jdbcType=INTEGER}, #{xyjHBfs,jdbcType=INTEGER}, #{xyjLockCs,jdbcType=INTEGER}, 
+      #{xyjLockRs,jdbcType=INTEGER}, #{xyjLockBfs,jdbcType=INTEGER}, #{xyjLsCs,jdbcType=INTEGER}, 
+      #{xyjLsRs,jdbcType=INTEGER}, #{xyjLsBfs,jdbcType=INTEGER}, #{xyjHgwtCs,jdbcType=INTEGER}, 
+      #{xyjHgwtRs,jdbcType=INTEGER}, #{xyjHgwtBfs,jdbcType=INTEGER}, #{cdAzCs,jdbcType=INTEGER}, 
+      #{cdAzRs,jdbcType=INTEGER}, #{cdAzBfs,jdbcType=INTEGER}, #{cdBgzCs,jdbcType=INTEGER}, 
+      #{cdBgzRs,jdbcType=INTEGER}, #{cdBgzBfs,jdbcType=INTEGER}, #{cdYsycCs,jdbcType=INTEGER}, 
+      #{cdYsycRs,jdbcType=INTEGER}, #{cdYsycBfs,jdbcType=INTEGER}, #{cdWxhCs,jdbcType=INTEGER}, 
+      #{cdWxhRs,jdbcType=INTEGER}, #{cdWxhBfs,jdbcType=INTEGER}, #{cdWftpCs,jdbcType=INTEGER}, 
+      #{cdWftpRs,jdbcType=INTEGER}, #{cdWftpBfs,jdbcType=INTEGER}, #{cdYtwsCs,jdbcType=INTEGER}, 
+      #{cdYtwsRs,jdbcType=INTEGER}, #{cdYtwsBfs,jdbcType=INTEGER}, #{cdXtkdCs,jdbcType=INTEGER}, 
+      #{cdXtkdRs,jdbcType=INTEGER}, #{cdXtkdBfs,jdbcType=INTEGER}, #{cdZdgjCs,jdbcType=INTEGER}, 
+      #{cdZdgjRs,jdbcType=INTEGER}, #{cdZdgjBfs,jdbcType=INTEGER}, #{cdYkslCs,jdbcType=INTEGER}, 
+      #{cdYkslRs,jdbcType=INTEGER}, #{cdYkslBfs,jdbcType=INTEGER}, #{cdYzqdCs,jdbcType=INTEGER}, 
+      #{cdYzqdRs,jdbcType=INTEGER}, #{cdYzqdBfs,jdbcType=INTEGER}, #{ktBzlCs,jdbcType=INTEGER}, 
+      #{ktBzlRs,jdbcType=INTEGER}, #{ktBzlBfs,jdbcType=INTEGER}, #{ktBzrCs,jdbcType=INTEGER}, 
+      #{ktBzrRs,jdbcType=INTEGER}, #{ktBzrBfs,jdbcType=INTEGER}, #{ktBkjCs,jdbcType=INTEGER}, 
+      #{ktBkjRs,jdbcType=INTEGER}, #{ktBkjBfs,jdbcType=INTEGER}, #{ktYzyCs,jdbcType=INTEGER}, 
+      #{ktYzyRs,jdbcType=INTEGER}, #{ktYzyBfs,jdbcType=INTEGER}, #{ktZrxgcCs,jdbcType=INTEGER}, 
+      #{ktZrxgcRs,jdbcType=INTEGER}, #{ktZrxgcBfs,jdbcType=INTEGER}, #{ktZlxgcCs,jdbcType=INTEGER}, 
+      #{ktZlxgcRs,jdbcType=INTEGER}, #{ktZlxgcBfs,jdbcType=INTEGER}, #{ktZdkgjCs,jdbcType=INTEGER}, 
+      #{ktZdkgjRs,jdbcType=INTEGER}, #{ktZdkgjBfs,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="com.wglvzyx.mybatisredis.entity.DayReportVideo" >
+    insert into haier_weixin_day_report_video
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="rq != null" >
+        rq,
+      </if>
+      <if test="bxWflwCs != null" >
+        bx_wflw_cs,
+      </if>
+      <if test="bxWflwRs != null" >
+        bx_wflw_rs,
+      </if>
+      <if test="bxWflwBfs != null" >
+        bx_wflw_bfs,
+      </if>
+      <if test="bxLcfrCs != null" >
+        bx_lcfr_cs,
+      </if>
+      <if test="bxLcfsRs != null" >
+        bx_lcfs_rs,
+      </if>
+      <if test="bxLcfsBfs != null" >
+        bx_lcfs_bfs,
+      </if>
+      <if test="cfdqBgzCs != null" >
+        cfdq_bgz_cs,
+      </if>
+      <if test="cfdqBgzRs != null" >
+        cfdq_bgz_rs,
+      </if>
+      <if test="cfdqBgzBfs != null" >
+        cfdq_bgz_bfs,
+      </if>
+      <if test="cfdqXlcCs != null" >
+        cfdq_xlc_cs,
+      </if>
+      <if test="cfdqXlcRs != null" >
+        cfdq_xlc_rs,
+      </if>
+      <if test="cfdqXlcBfs != null" >
+        cfdq_xlc_bfs,
+      </if>
+      <if test="cfdqDbzhCs != null" >
+        cfdq_dbzh_cs,
+      </if>
+      <if test="cfdqDbzhRs != null" >
+        cfdq_dbzh_rs,
+      </if>
+      <if test="cfdqDbzhBfs != null" >
+        cfdq_dbzh_bfs,
+      </if>
+      <if test="cfdqSsxhCs != null" >
+        cfdq_ssxh_cs,
+      </if>
+      <if test="cfdqSsxhRs != null" >
+        cfdq_ssxh_rs,
+      </if>
+      <if test="cfdqSsxhBfs != null" >
+        cfdq_ssxh_bfs,
+      </if>
+      <if test="cfdqLsCs != null" >
+        cfdq_ls_cs,
+      </if>
+      <if test="cfdqLsRs != null" >
+        cfdq_ls_rs,
+      </if>
+      <if test="cfdqLsBfs != null" >
+        cfdq_ls_bfs,
+      </if>
+      <if test="cfdqHyscCs != null" >
+        cfdq_hysc_cs,
+      </if>
+      <if test="cfdqHyscRs != null" >
+        cfdq_hysc_rs,
+      </if>
+      <if test="cfdqHyscBfs != null" >
+        cfdq_hysc_bfs,
+      </if>
+      <if test="cfdqZdxhCs != null" >
+        cfdq_zdxh_cs,
+      </if>
+      <if test="cfdqZdxhRs != null" >
+        cfdq_zdxh_rs,
+      </if>
+      <if test="cfdqZdxhBfs != null" >
+        cfdq_zdxh_bfs,
+      </if>
+      <if test="cfdqFgsxhCs != null" >
+        cfdq_fgsxh_cs,
+      </if>
+      <if test="cfdqFgsxhRs != null" >
+        cfdq_fgsxh_rs,
+      </if>
+      <if test="cfdqFgsxhBfs != null" >
+        cfdq_fgsxh_bfs,
+      </if>
+      <if test="cfdqFdzwCs != null" >
+        cfdq_fdzw_cs,
+      </if>
+      <if test="cfdqFdzwRs != null" >
+        cfdq_fdzw_rs,
+      </if>
+      <if test="cfdqFdzwBfs != null" >
+        cfdq_fdzw_bfs,
+      </if>
+      <if test="cfdqHhCs != null" >
+        cfdq_hh_cs,
+      </if>
+      <if test="cfdqHhRs != null" >
+        cfdq_hh_rs,
+      </if>
+      <if test="cfdqHhBfs != null" >
+        cfdq_hh_bfs,
+      </if>
+      <if test="xyjAzCs != null" >
+        xyj_az_cs,
+      </if>
+      <if test="xyjAzRs != null" >
+        xyj_az_rs,
+      </if>
+      <if test="xyjAzBfs != null" >
+        xyj_az_bfs,
+      </if>
+      <if test="xyjBgzCs != null" >
+        xyj_bgz_cs,
+      </if>
+      <if test="xyjBgzRs != null" >
+        xyj_bgz_rs,
+      </if>
+      <if test="xyjBgzBfs != null" >
+        xyj_bgz_bfs,
+      </if>
+      <if test="xyjBtsCs != null" >
+        xyj_bts_cs,
+      </if>
+      <if test="xyjBtsRs != null" >
+        xyj_bts_rs,
+      </if>
+      <if test="xyjBtsBfs != null" >
+        xyj_bts_bfs,
+      </if>
+      <if test="xyjCyCs != null" >
+        xyj_cy_cs,
+      </if>
+      <if test="xyjCyRs != null" >
+        xyj_cy_rs,
+      </if>
+      <if test="xyjCyBfs != null" >
+        xyj_cy_bfs,
+      </if>
+      <if test="xyjKbljCs != null" >
+        xyj_kblj_cs,
+      </if>
+      <if test="xyjKbljRs != null" >
+        xyj_kblj_rs,
+      </if>
+      <if test="xyjKbljBfs != null" >
+        xyj_kblj_bfs,
+      </if>
+      <if test="xyjE1Cs != null" >
+        xyj_e1_cs,
+      </if>
+      <if test="xyjE1Rs != null" >
+        xyj_e1_rs,
+      </if>
+      <if test="xyjE1Bfs != null" >
+        xyj_e1_bfs,
+      </if>
+      <if test="xyjE2Cs != null" >
+        xyj_e2_cs,
+      </if>
+      <if test="xyjE2Rs != null" >
+        xyj_e2_rs,
+      </if>
+      <if test="xyjE2Bfs != null" >
+        xyj_e2_bfs,
+      </if>
+      <if test="xyjE3Cs != null" >
+        xyj_e3_cs,
+      </if>
+      <if test="xyjE3Rs != null" >
+        xyj_e3_rs,
+      </if>
+      <if test="xyjE3Bfs != null" >
+        xyj_e3_bfs,
+      </if>
+      <if test="xyjE4Cs != null" >
+        xyj_e4_cs,
+      </if>
+      <if test="xyjE4Rs != null" >
+        xyj_e4_rs,
+      </if>
+      <if test="xyjE4Bfs != null" >
+        xyj_e4_bfs,
+      </if>
+      <if test="xyjHCs != null" >
+        xyj_h_cs,
+      </if>
+      <if test="xyjHRs != null" >
+        xyj_h_rs,
+      </if>
+      <if test="xyjHBfs != null" >
+        xyj_h_bfs,
+      </if>
+      <if test="xyjLockCs != null" >
+        xyj_lock_cs,
+      </if>
+      <if test="xyjLockRs != null" >
+        xyj_lock_rs,
+      </if>
+      <if test="xyjLockBfs != null" >
+        xyj_lock_bfs,
+      </if>
+      <if test="xyjLsCs != null" >
+        xyj_ls_cs,
+      </if>
+      <if test="xyjLsRs != null" >
+        xyj_ls_rs,
+      </if>
+      <if test="xyjLsBfs != null" >
+        xyj_ls_bfs,
+      </if>
+      <if test="xyjHgwtCs != null" >
+        xyj_hgwt_cs,
+      </if>
+      <if test="xyjHgwtRs != null" >
+        xyj_hgwt_rs,
+      </if>
+      <if test="xyjHgwtBfs != null" >
+        xyj_hgwt_bfs,
+      </if>
+      <if test="cdAzCs != null" >
+        cd_az_cs,
+      </if>
+      <if test="cdAzRs != null" >
+        cd_az_rs,
+      </if>
+      <if test="cdAzBfs != null" >
+        cd_az_bfs,
+      </if>
+      <if test="cdBgzCs != null" >
+        cd_bgz_cs,
+      </if>
+      <if test="cdBgzRs != null" >
+        cd_bgz_rs,
+      </if>
+      <if test="cdBgzBfs != null" >
+        cd_bgz_bfs,
+      </if>
+      <if test="cdYsycCs != null" >
+        cd_ysyc_cs,
+      </if>
+      <if test="cdYsycRs != null" >
+        cd_ysyc_rs,
+      </if>
+      <if test="cdYsycBfs != null" >
+        cd_ysyc_bfs,
+      </if>
+      <if test="cdWxhCs != null" >
+        cd_wxh_cs,
+      </if>
+      <if test="cdWxhRs != null" >
+        cd_wxh_rs,
+      </if>
+      <if test="cdWxhBfs != null" >
+        cd_wxh_bfs,
+      </if>
+      <if test="cdWftpCs != null" >
+        cd_wftp_cs,
+      </if>
+      <if test="cdWftpRs != null" >
+        cd_wftp_rs,
+      </if>
+      <if test="cdWftpBfs != null" >
+        cd_wftp_bfs,
+      </if>
+      <if test="cdYtwsCs != null" >
+        cd_ytws_cs,
+      </if>
+      <if test="cdYtwsRs != null" >
+        cd_ytws_rs,
+      </if>
+      <if test="cdYtwsBfs != null" >
+        cd_ytws_bfs,
+      </if>
+      <if test="cdXtkdCs != null" >
+        cd_xtkd_cs,
+      </if>
+      <if test="cdXtkdRs != null" >
+        cd_xtkd_rs,
+      </if>
+      <if test="cdXtkdBfs != null" >
+        cd_xtkd_bfs,
+      </if>
+      <if test="cdZdgjCs != null" >
+        cd_zdgj_cs,
+      </if>
+      <if test="cdZdgjRs != null" >
+        cd_zdgj_rs,
+      </if>
+      <if test="cdZdgjBfs != null" >
+        cd_zdgj_bfs,
+      </if>
+      <if test="cdYkslCs != null" >
+        cd_yksl_cs,
+      </if>
+      <if test="cdYkslRs != null" >
+        cd_yksl_rs,
+      </if>
+      <if test="cdYkslBfs != null" >
+        cd_yksl_bfs,
+      </if>
+      <if test="cdYzqdCs != null" >
+        cd_yzqd_cs,
+      </if>
+      <if test="cdYzqdRs != null" >
+        cd_yzqd_rs,
+      </if>
+      <if test="cdYzqdBfs != null" >
+        cd_yzqd_bfs,
+      </if>
+      <if test="ktBzlCs != null" >
+        kt_bzl_cs,
+      </if>
+      <if test="ktBzlRs != null" >
+        kt_bzl_rs,
+      </if>
+      <if test="ktBzlBfs != null" >
+        kt_bzl_bfs,
+      </if>
+      <if test="ktBzrCs != null" >
+        kt_bzr_cs,
+      </if>
+      <if test="ktBzrRs != null" >
+        kt_bzr_rs,
+      </if>
+      <if test="ktBzrBfs != null" >
+        kt_bzr_bfs,
+      </if>
+      <if test="ktBkjCs != null" >
+        kt_bkj_cs,
+      </if>
+      <if test="ktBkjRs != null" >
+        kt_bkj_rs,
+      </if>
+      <if test="ktBkjBfs != null" >
+        kt_bkj_bfs,
+      </if>
+      <if test="ktYzyCs != null" >
+        kt_yzy_cs,
+      </if>
+      <if test="ktYzyRs != null" >
+        kt_yzy_rs,
+      </if>
+      <if test="ktYzyBfs != null" >
+        kt_yzy_bfs,
+      </if>
+      <if test="ktZrxgcCs != null" >
+        kt_zrxgc_cs,
+      </if>
+      <if test="ktZrxgcRs != null" >
+        kt_zrxgc_rs,
+      </if>
+      <if test="ktZrxgcBfs != null" >
+        kt_zrxgc_bfs,
+      </if>
+      <if test="ktZlxgcCs != null" >
+        kt_zlxgc_cs,
+      </if>
+      <if test="ktZlxgcRs != null" >
+        kt_zlxgc_rs,
+      </if>
+      <if test="ktZlxgcBfs != null" >
+        kt_zlxgc_bfs,
+      </if>
+      <if test="ktZdkgjCs != null" >
+        kt_zdkgj_cs,
+      </if>
+      <if test="ktZdkgjRs != null" >
+        kt_zdkgj_rs,
+      </if>
+      <if test="ktZdkgjBfs != null" >
+        kt_zdkgj_bfs,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="rq != null" >
+        #{rq,jdbcType=VARCHAR},
+      </if>
+      <if test="bxWflwCs != null" >
+        #{bxWflwCs,jdbcType=INTEGER},
+      </if>
+      <if test="bxWflwRs != null" >
+        #{bxWflwRs,jdbcType=INTEGER},
+      </if>
+      <if test="bxWflwBfs != null" >
+        #{bxWflwBfs,jdbcType=INTEGER},
+      </if>
+      <if test="bxLcfrCs != null" >
+        #{bxLcfrCs,jdbcType=INTEGER},
+      </if>
+      <if test="bxLcfsRs != null" >
+        #{bxLcfsRs,jdbcType=INTEGER},
+      </if>
+      <if test="bxLcfsBfs != null" >
+        #{bxLcfsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqBgzCs != null" >
+        #{cfdqBgzCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqBgzRs != null" >
+        #{cfdqBgzRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqBgzBfs != null" >
+        #{cfdqBgzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqXlcCs != null" >
+        #{cfdqXlcCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqXlcRs != null" >
+        #{cfdqXlcRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqXlcBfs != null" >
+        #{cfdqXlcBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqDbzhCs != null" >
+        #{cfdqDbzhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqDbzhRs != null" >
+        #{cfdqDbzhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqDbzhBfs != null" >
+        #{cfdqDbzhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqSsxhCs != null" >
+        #{cfdqSsxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqSsxhRs != null" >
+        #{cfdqSsxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqSsxhBfs != null" >
+        #{cfdqSsxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqLsCs != null" >
+        #{cfdqLsCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqLsRs != null" >
+        #{cfdqLsRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqLsBfs != null" >
+        #{cfdqLsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHyscCs != null" >
+        #{cfdqHyscCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHyscRs != null" >
+        #{cfdqHyscRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHyscBfs != null" >
+        #{cfdqHyscBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqZdxhCs != null" >
+        #{cfdqZdxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqZdxhRs != null" >
+        #{cfdqZdxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqZdxhBfs != null" >
+        #{cfdqZdxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFgsxhCs != null" >
+        #{cfdqFgsxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFgsxhRs != null" >
+        #{cfdqFgsxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFgsxhBfs != null" >
+        #{cfdqFgsxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFdzwCs != null" >
+        #{cfdqFdzwCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFdzwRs != null" >
+        #{cfdqFdzwRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFdzwBfs != null" >
+        #{cfdqFdzwBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHhCs != null" >
+        #{cfdqHhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHhRs != null" >
+        #{cfdqHhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHhBfs != null" >
+        #{cfdqHhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjAzCs != null" >
+        #{xyjAzCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjAzRs != null" >
+        #{xyjAzRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjAzBfs != null" >
+        #{xyjAzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBgzCs != null" >
+        #{xyjBgzCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBgzRs != null" >
+        #{xyjBgzRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBgzBfs != null" >
+        #{xyjBgzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBtsCs != null" >
+        #{xyjBtsCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBtsRs != null" >
+        #{xyjBtsRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBtsBfs != null" >
+        #{xyjBtsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjCyCs != null" >
+        #{xyjCyCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjCyRs != null" >
+        #{xyjCyRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjCyBfs != null" >
+        #{xyjCyBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjKbljCs != null" >
+        #{xyjKbljCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjKbljRs != null" >
+        #{xyjKbljRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjKbljBfs != null" >
+        #{xyjKbljBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE1Cs != null" >
+        #{xyjE1Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE1Rs != null" >
+        #{xyjE1Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE1Bfs != null" >
+        #{xyjE1Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE2Cs != null" >
+        #{xyjE2Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE2Rs != null" >
+        #{xyjE2Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE2Bfs != null" >
+        #{xyjE2Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE3Cs != null" >
+        #{xyjE3Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE3Rs != null" >
+        #{xyjE3Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE3Bfs != null" >
+        #{xyjE3Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE4Cs != null" >
+        #{xyjE4Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE4Rs != null" >
+        #{xyjE4Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE4Bfs != null" >
+        #{xyjE4Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHCs != null" >
+        #{xyjHCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHRs != null" >
+        #{xyjHRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHBfs != null" >
+        #{xyjHBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLockCs != null" >
+        #{xyjLockCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLockRs != null" >
+        #{xyjLockRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLockBfs != null" >
+        #{xyjLockBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLsCs != null" >
+        #{xyjLsCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLsRs != null" >
+        #{xyjLsRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLsBfs != null" >
+        #{xyjLsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHgwtCs != null" >
+        #{xyjHgwtCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHgwtRs != null" >
+        #{xyjHgwtRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHgwtBfs != null" >
+        #{xyjHgwtBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdAzCs != null" >
+        #{cdAzCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdAzRs != null" >
+        #{cdAzRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdAzBfs != null" >
+        #{cdAzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdBgzCs != null" >
+        #{cdBgzCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdBgzRs != null" >
+        #{cdBgzRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdBgzBfs != null" >
+        #{cdBgzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYsycCs != null" >
+        #{cdYsycCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYsycRs != null" >
+        #{cdYsycRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYsycBfs != null" >
+        #{cdYsycBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWxhCs != null" >
+        #{cdWxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWxhRs != null" >
+        #{cdWxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWxhBfs != null" >
+        #{cdWxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWftpCs != null" >
+        #{cdWftpCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWftpRs != null" >
+        #{cdWftpRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWftpBfs != null" >
+        #{cdWftpBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYtwsCs != null" >
+        #{cdYtwsCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYtwsRs != null" >
+        #{cdYtwsRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYtwsBfs != null" >
+        #{cdYtwsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdXtkdCs != null" >
+        #{cdXtkdCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdXtkdRs != null" >
+        #{cdXtkdRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdXtkdBfs != null" >
+        #{cdXtkdBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdZdgjCs != null" >
+        #{cdZdgjCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdZdgjRs != null" >
+        #{cdZdgjRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdZdgjBfs != null" >
+        #{cdZdgjBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYkslCs != null" >
+        #{cdYkslCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYkslRs != null" >
+        #{cdYkslRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYkslBfs != null" >
+        #{cdYkslBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYzqdCs != null" >
+        #{cdYzqdCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYzqdRs != null" >
+        #{cdYzqdRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYzqdBfs != null" >
+        #{cdYzqdBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzlCs != null" >
+        #{ktBzlCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzlRs != null" >
+        #{ktBzlRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzlBfs != null" >
+        #{ktBzlBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzrCs != null" >
+        #{ktBzrCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzrRs != null" >
+        #{ktBzrRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzrBfs != null" >
+        #{ktBzrBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBkjCs != null" >
+        #{ktBkjCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBkjRs != null" >
+        #{ktBkjRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBkjBfs != null" >
+        #{ktBkjBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktYzyCs != null" >
+        #{ktYzyCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktYzyRs != null" >
+        #{ktYzyRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktYzyBfs != null" >
+        #{ktYzyBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZrxgcCs != null" >
+        #{ktZrxgcCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZrxgcRs != null" >
+        #{ktZrxgcRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZrxgcBfs != null" >
+        #{ktZrxgcBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZlxgcCs != null" >
+        #{ktZlxgcCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZlxgcRs != null" >
+        #{ktZlxgcRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZlxgcBfs != null" >
+        #{ktZlxgcBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZdkgjCs != null" >
+        #{ktZdkgjCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZdkgjRs != null" >
+        #{ktZdkgjRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZdkgjBfs != null" >
+        #{ktZdkgjBfs,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.wglvzyx.mybatisredis.entity.DayReportVideo" >
+    update haier_weixin_day_report_video
+    <set >
+      <if test="rq != null" >
+        rq = #{rq,jdbcType=VARCHAR},
+      </if>
+      <if test="bxWflwCs != null" >
+        bx_wflw_cs = #{bxWflwCs,jdbcType=INTEGER},
+      </if>
+      <if test="bxWflwRs != null" >
+        bx_wflw_rs = #{bxWflwRs,jdbcType=INTEGER},
+      </if>
+      <if test="bxWflwBfs != null" >
+        bx_wflw_bfs = #{bxWflwBfs,jdbcType=INTEGER},
+      </if>
+      <if test="bxLcfrCs != null" >
+        bx_lcfr_cs = #{bxLcfrCs,jdbcType=INTEGER},
+      </if>
+      <if test="bxLcfsRs != null" >
+        bx_lcfs_rs = #{bxLcfsRs,jdbcType=INTEGER},
+      </if>
+      <if test="bxLcfsBfs != null" >
+        bx_lcfs_bfs = #{bxLcfsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqBgzCs != null" >
+        cfdq_bgz_cs = #{cfdqBgzCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqBgzRs != null" >
+        cfdq_bgz_rs = #{cfdqBgzRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqBgzBfs != null" >
+        cfdq_bgz_bfs = #{cfdqBgzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqXlcCs != null" >
+        cfdq_xlc_cs = #{cfdqXlcCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqXlcRs != null" >
+        cfdq_xlc_rs = #{cfdqXlcRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqXlcBfs != null" >
+        cfdq_xlc_bfs = #{cfdqXlcBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqDbzhCs != null" >
+        cfdq_dbzh_cs = #{cfdqDbzhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqDbzhRs != null" >
+        cfdq_dbzh_rs = #{cfdqDbzhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqDbzhBfs != null" >
+        cfdq_dbzh_bfs = #{cfdqDbzhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqSsxhCs != null" >
+        cfdq_ssxh_cs = #{cfdqSsxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqSsxhRs != null" >
+        cfdq_ssxh_rs = #{cfdqSsxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqSsxhBfs != null" >
+        cfdq_ssxh_bfs = #{cfdqSsxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqLsCs != null" >
+        cfdq_ls_cs = #{cfdqLsCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqLsRs != null" >
+        cfdq_ls_rs = #{cfdqLsRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqLsBfs != null" >
+        cfdq_ls_bfs = #{cfdqLsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHyscCs != null" >
+        cfdq_hysc_cs = #{cfdqHyscCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHyscRs != null" >
+        cfdq_hysc_rs = #{cfdqHyscRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHyscBfs != null" >
+        cfdq_hysc_bfs = #{cfdqHyscBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqZdxhCs != null" >
+        cfdq_zdxh_cs = #{cfdqZdxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqZdxhRs != null" >
+        cfdq_zdxh_rs = #{cfdqZdxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqZdxhBfs != null" >
+        cfdq_zdxh_bfs = #{cfdqZdxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFgsxhCs != null" >
+        cfdq_fgsxh_cs = #{cfdqFgsxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFgsxhRs != null" >
+        cfdq_fgsxh_rs = #{cfdqFgsxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFgsxhBfs != null" >
+        cfdq_fgsxh_bfs = #{cfdqFgsxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFdzwCs != null" >
+        cfdq_fdzw_cs = #{cfdqFdzwCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFdzwRs != null" >
+        cfdq_fdzw_rs = #{cfdqFdzwRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqFdzwBfs != null" >
+        cfdq_fdzw_bfs = #{cfdqFdzwBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHhCs != null" >
+        cfdq_hh_cs = #{cfdqHhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHhRs != null" >
+        cfdq_hh_rs = #{cfdqHhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cfdqHhBfs != null" >
+        cfdq_hh_bfs = #{cfdqHhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjAzCs != null" >
+        xyj_az_cs = #{xyjAzCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjAzRs != null" >
+        xyj_az_rs = #{xyjAzRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjAzBfs != null" >
+        xyj_az_bfs = #{xyjAzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBgzCs != null" >
+        xyj_bgz_cs = #{xyjBgzCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBgzRs != null" >
+        xyj_bgz_rs = #{xyjBgzRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBgzBfs != null" >
+        xyj_bgz_bfs = #{xyjBgzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBtsCs != null" >
+        xyj_bts_cs = #{xyjBtsCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBtsRs != null" >
+        xyj_bts_rs = #{xyjBtsRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjBtsBfs != null" >
+        xyj_bts_bfs = #{xyjBtsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjCyCs != null" >
+        xyj_cy_cs = #{xyjCyCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjCyRs != null" >
+        xyj_cy_rs = #{xyjCyRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjCyBfs != null" >
+        xyj_cy_bfs = #{xyjCyBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjKbljCs != null" >
+        xyj_kblj_cs = #{xyjKbljCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjKbljRs != null" >
+        xyj_kblj_rs = #{xyjKbljRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjKbljBfs != null" >
+        xyj_kblj_bfs = #{xyjKbljBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE1Cs != null" >
+        xyj_e1_cs = #{xyjE1Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE1Rs != null" >
+        xyj_e1_rs = #{xyjE1Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE1Bfs != null" >
+        xyj_e1_bfs = #{xyjE1Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE2Cs != null" >
+        xyj_e2_cs = #{xyjE2Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE2Rs != null" >
+        xyj_e2_rs = #{xyjE2Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE2Bfs != null" >
+        xyj_e2_bfs = #{xyjE2Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE3Cs != null" >
+        xyj_e3_cs = #{xyjE3Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE3Rs != null" >
+        xyj_e3_rs = #{xyjE3Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE3Bfs != null" >
+        xyj_e3_bfs = #{xyjE3Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE4Cs != null" >
+        xyj_e4_cs = #{xyjE4Cs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE4Rs != null" >
+        xyj_e4_rs = #{xyjE4Rs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjE4Bfs != null" >
+        xyj_e4_bfs = #{xyjE4Bfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHCs != null" >
+        xyj_h_cs = #{xyjHCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHRs != null" >
+        xyj_h_rs = #{xyjHRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHBfs != null" >
+        xyj_h_bfs = #{xyjHBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLockCs != null" >
+        xyj_lock_cs = #{xyjLockCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLockRs != null" >
+        xyj_lock_rs = #{xyjLockRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLockBfs != null" >
+        xyj_lock_bfs = #{xyjLockBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLsCs != null" >
+        xyj_ls_cs = #{xyjLsCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLsRs != null" >
+        xyj_ls_rs = #{xyjLsRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjLsBfs != null" >
+        xyj_ls_bfs = #{xyjLsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHgwtCs != null" >
+        xyj_hgwt_cs = #{xyjHgwtCs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHgwtRs != null" >
+        xyj_hgwt_rs = #{xyjHgwtRs,jdbcType=INTEGER},
+      </if>
+      <if test="xyjHgwtBfs != null" >
+        xyj_hgwt_bfs = #{xyjHgwtBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdAzCs != null" >
+        cd_az_cs = #{cdAzCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdAzRs != null" >
+        cd_az_rs = #{cdAzRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdAzBfs != null" >
+        cd_az_bfs = #{cdAzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdBgzCs != null" >
+        cd_bgz_cs = #{cdBgzCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdBgzRs != null" >
+        cd_bgz_rs = #{cdBgzRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdBgzBfs != null" >
+        cd_bgz_bfs = #{cdBgzBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYsycCs != null" >
+        cd_ysyc_cs = #{cdYsycCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYsycRs != null" >
+        cd_ysyc_rs = #{cdYsycRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYsycBfs != null" >
+        cd_ysyc_bfs = #{cdYsycBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWxhCs != null" >
+        cd_wxh_cs = #{cdWxhCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWxhRs != null" >
+        cd_wxh_rs = #{cdWxhRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWxhBfs != null" >
+        cd_wxh_bfs = #{cdWxhBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWftpCs != null" >
+        cd_wftp_cs = #{cdWftpCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWftpRs != null" >
+        cd_wftp_rs = #{cdWftpRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdWftpBfs != null" >
+        cd_wftp_bfs = #{cdWftpBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYtwsCs != null" >
+        cd_ytws_cs = #{cdYtwsCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYtwsRs != null" >
+        cd_ytws_rs = #{cdYtwsRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYtwsBfs != null" >
+        cd_ytws_bfs = #{cdYtwsBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdXtkdCs != null" >
+        cd_xtkd_cs = #{cdXtkdCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdXtkdRs != null" >
+        cd_xtkd_rs = #{cdXtkdRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdXtkdBfs != null" >
+        cd_xtkd_bfs = #{cdXtkdBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdZdgjCs != null" >
+        cd_zdgj_cs = #{cdZdgjCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdZdgjRs != null" >
+        cd_zdgj_rs = #{cdZdgjRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdZdgjBfs != null" >
+        cd_zdgj_bfs = #{cdZdgjBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYkslCs != null" >
+        cd_yksl_cs = #{cdYkslCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYkslRs != null" >
+        cd_yksl_rs = #{cdYkslRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYkslBfs != null" >
+        cd_yksl_bfs = #{cdYkslBfs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYzqdCs != null" >
+        cd_yzqd_cs = #{cdYzqdCs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYzqdRs != null" >
+        cd_yzqd_rs = #{cdYzqdRs,jdbcType=INTEGER},
+      </if>
+      <if test="cdYzqdBfs != null" >
+        cd_yzqd_bfs = #{cdYzqdBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzlCs != null" >
+        kt_bzl_cs = #{ktBzlCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzlRs != null" >
+        kt_bzl_rs = #{ktBzlRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzlBfs != null" >
+        kt_bzl_bfs = #{ktBzlBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzrCs != null" >
+        kt_bzr_cs = #{ktBzrCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzrRs != null" >
+        kt_bzr_rs = #{ktBzrRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBzrBfs != null" >
+        kt_bzr_bfs = #{ktBzrBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBkjCs != null" >
+        kt_bkj_cs = #{ktBkjCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBkjRs != null" >
+        kt_bkj_rs = #{ktBkjRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktBkjBfs != null" >
+        kt_bkj_bfs = #{ktBkjBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktYzyCs != null" >
+        kt_yzy_cs = #{ktYzyCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktYzyRs != null" >
+        kt_yzy_rs = #{ktYzyRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktYzyBfs != null" >
+        kt_yzy_bfs = #{ktYzyBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZrxgcCs != null" >
+        kt_zrxgc_cs = #{ktZrxgcCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZrxgcRs != null" >
+        kt_zrxgc_rs = #{ktZrxgcRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZrxgcBfs != null" >
+        kt_zrxgc_bfs = #{ktZrxgcBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZlxgcCs != null" >
+        kt_zlxgc_cs = #{ktZlxgcCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZlxgcRs != null" >
+        kt_zlxgc_rs = #{ktZlxgcRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZlxgcBfs != null" >
+        kt_zlxgc_bfs = #{ktZlxgcBfs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZdkgjCs != null" >
+        kt_zdkgj_cs = #{ktZdkgjCs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZdkgjRs != null" >
+        kt_zdkgj_rs = #{ktZdkgjRs,jdbcType=INTEGER},
+      </if>
+      <if test="ktZdkgjBfs != null" >
+        kt_zdkgj_bfs = #{ktZdkgjBfs,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.wglvzyx.mybatisredis.entity.DayReportVideo" >
+    update haier_weixin_day_report_video
+    set rq = #{rq,jdbcType=VARCHAR},
+      bx_wflw_cs = #{bxWflwCs,jdbcType=INTEGER},
+      bx_wflw_rs = #{bxWflwRs,jdbcType=INTEGER},
+      bx_wflw_bfs = #{bxWflwBfs,jdbcType=INTEGER},
+      bx_lcfr_cs = #{bxLcfrCs,jdbcType=INTEGER},
+      bx_lcfs_rs = #{bxLcfsRs,jdbcType=INTEGER},
+      bx_lcfs_bfs = #{bxLcfsBfs,jdbcType=INTEGER},
+      cfdq_bgz_cs = #{cfdqBgzCs,jdbcType=INTEGER},
+      cfdq_bgz_rs = #{cfdqBgzRs,jdbcType=INTEGER},
+      cfdq_bgz_bfs = #{cfdqBgzBfs,jdbcType=INTEGER},
+      cfdq_xlc_cs = #{cfdqXlcCs,jdbcType=INTEGER},
+      cfdq_xlc_rs = #{cfdqXlcRs,jdbcType=INTEGER},
+      cfdq_xlc_bfs = #{cfdqXlcBfs,jdbcType=INTEGER},
+      cfdq_dbzh_cs = #{cfdqDbzhCs,jdbcType=INTEGER},
+      cfdq_dbzh_rs = #{cfdqDbzhRs,jdbcType=INTEGER},
+      cfdq_dbzh_bfs = #{cfdqDbzhBfs,jdbcType=INTEGER},
+      cfdq_ssxh_cs = #{cfdqSsxhCs,jdbcType=INTEGER},
+      cfdq_ssxh_rs = #{cfdqSsxhRs,jdbcType=INTEGER},
+      cfdq_ssxh_bfs = #{cfdqSsxhBfs,jdbcType=INTEGER},
+      cfdq_ls_cs = #{cfdqLsCs,jdbcType=INTEGER},
+      cfdq_ls_rs = #{cfdqLsRs,jdbcType=INTEGER},
+      cfdq_ls_bfs = #{cfdqLsBfs,jdbcType=INTEGER},
+      cfdq_hysc_cs = #{cfdqHyscCs,jdbcType=INTEGER},
+      cfdq_hysc_rs = #{cfdqHyscRs,jdbcType=INTEGER},
+      cfdq_hysc_bfs = #{cfdqHyscBfs,jdbcType=INTEGER},
+      cfdq_zdxh_cs = #{cfdqZdxhCs,jdbcType=INTEGER},
+      cfdq_zdxh_rs = #{cfdqZdxhRs,jdbcType=INTEGER},
+      cfdq_zdxh_bfs = #{cfdqZdxhBfs,jdbcType=INTEGER},
+      cfdq_fgsxh_cs = #{cfdqFgsxhCs,jdbcType=INTEGER},
+      cfdq_fgsxh_rs = #{cfdqFgsxhRs,jdbcType=INTEGER},
+      cfdq_fgsxh_bfs = #{cfdqFgsxhBfs,jdbcType=INTEGER},
+      cfdq_fdzw_cs = #{cfdqFdzwCs,jdbcType=INTEGER},
+      cfdq_fdzw_rs = #{cfdqFdzwRs,jdbcType=INTEGER},
+      cfdq_fdzw_bfs = #{cfdqFdzwBfs,jdbcType=INTEGER},
+      cfdq_hh_cs = #{cfdqHhCs,jdbcType=INTEGER},
+      cfdq_hh_rs = #{cfdqHhRs,jdbcType=INTEGER},
+      cfdq_hh_bfs = #{cfdqHhBfs,jdbcType=INTEGER},
+      xyj_az_cs = #{xyjAzCs,jdbcType=INTEGER},
+      xyj_az_rs = #{xyjAzRs,jdbcType=INTEGER},
+      xyj_az_bfs = #{xyjAzBfs,jdbcType=INTEGER},
+      xyj_bgz_cs = #{xyjBgzCs,jdbcType=INTEGER},
+      xyj_bgz_rs = #{xyjBgzRs,jdbcType=INTEGER},
+      xyj_bgz_bfs = #{xyjBgzBfs,jdbcType=INTEGER},
+      xyj_bts_cs = #{xyjBtsCs,jdbcType=INTEGER},
+      xyj_bts_rs = #{xyjBtsRs,jdbcType=INTEGER},
+      xyj_bts_bfs = #{xyjBtsBfs,jdbcType=INTEGER},
+      xyj_cy_cs = #{xyjCyCs,jdbcType=INTEGER},
+      xyj_cy_rs = #{xyjCyRs,jdbcType=INTEGER},
+      xyj_cy_bfs = #{xyjCyBfs,jdbcType=INTEGER},
+      xyj_kblj_cs = #{xyjKbljCs,jdbcType=INTEGER},
+      xyj_kblj_rs = #{xyjKbljRs,jdbcType=INTEGER},
+      xyj_kblj_bfs = #{xyjKbljBfs,jdbcType=INTEGER},
+      xyj_e1_cs = #{xyjE1Cs,jdbcType=INTEGER},
+      xyj_e1_rs = #{xyjE1Rs,jdbcType=INTEGER},
+      xyj_e1_bfs = #{xyjE1Bfs,jdbcType=INTEGER},
+      xyj_e2_cs = #{xyjE2Cs,jdbcType=INTEGER},
+      xyj_e2_rs = #{xyjE2Rs,jdbcType=INTEGER},
+      xyj_e2_bfs = #{xyjE2Bfs,jdbcType=INTEGER},
+      xyj_e3_cs = #{xyjE3Cs,jdbcType=INTEGER},
+      xyj_e3_rs = #{xyjE3Rs,jdbcType=INTEGER},
+      xyj_e3_bfs = #{xyjE3Bfs,jdbcType=INTEGER},
+      xyj_e4_cs = #{xyjE4Cs,jdbcType=INTEGER},
+      xyj_e4_rs = #{xyjE4Rs,jdbcType=INTEGER},
+      xyj_e4_bfs = #{xyjE4Bfs,jdbcType=INTEGER},
+      xyj_h_cs = #{xyjHCs,jdbcType=INTEGER},
+      xyj_h_rs = #{xyjHRs,jdbcType=INTEGER},
+      xyj_h_bfs = #{xyjHBfs,jdbcType=INTEGER},
+      xyj_lock_cs = #{xyjLockCs,jdbcType=INTEGER},
+      xyj_lock_rs = #{xyjLockRs,jdbcType=INTEGER},
+      xyj_lock_bfs = #{xyjLockBfs,jdbcType=INTEGER},
+      xyj_ls_cs = #{xyjLsCs,jdbcType=INTEGER},
+      xyj_ls_rs = #{xyjLsRs,jdbcType=INTEGER},
+      xyj_ls_bfs = #{xyjLsBfs,jdbcType=INTEGER},
+      xyj_hgwt_cs = #{xyjHgwtCs,jdbcType=INTEGER},
+      xyj_hgwt_rs = #{xyjHgwtRs,jdbcType=INTEGER},
+      xyj_hgwt_bfs = #{xyjHgwtBfs,jdbcType=INTEGER},
+      cd_az_cs = #{cdAzCs,jdbcType=INTEGER},
+      cd_az_rs = #{cdAzRs,jdbcType=INTEGER},
+      cd_az_bfs = #{cdAzBfs,jdbcType=INTEGER},
+      cd_bgz_cs = #{cdBgzCs,jdbcType=INTEGER},
+      cd_bgz_rs = #{cdBgzRs,jdbcType=INTEGER},
+      cd_bgz_bfs = #{cdBgzBfs,jdbcType=INTEGER},
+      cd_ysyc_cs = #{cdYsycCs,jdbcType=INTEGER},
+      cd_ysyc_rs = #{cdYsycRs,jdbcType=INTEGER},
+      cd_ysyc_bfs = #{cdYsycBfs,jdbcType=INTEGER},
+      cd_wxh_cs = #{cdWxhCs,jdbcType=INTEGER},
+      cd_wxh_rs = #{cdWxhRs,jdbcType=INTEGER},
+      cd_wxh_bfs = #{cdWxhBfs,jdbcType=INTEGER},
+      cd_wftp_cs = #{cdWftpCs,jdbcType=INTEGER},
+      cd_wftp_rs = #{cdWftpRs,jdbcType=INTEGER},
+      cd_wftp_bfs = #{cdWftpBfs,jdbcType=INTEGER},
+      cd_ytws_cs = #{cdYtwsCs,jdbcType=INTEGER},
+      cd_ytws_rs = #{cdYtwsRs,jdbcType=INTEGER},
+      cd_ytws_bfs = #{cdYtwsBfs,jdbcType=INTEGER},
+      cd_xtkd_cs = #{cdXtkdCs,jdbcType=INTEGER},
+      cd_xtkd_rs = #{cdXtkdRs,jdbcType=INTEGER},
+      cd_xtkd_bfs = #{cdXtkdBfs,jdbcType=INTEGER},
+      cd_zdgj_cs = #{cdZdgjCs,jdbcType=INTEGER},
+      cd_zdgj_rs = #{cdZdgjRs,jdbcType=INTEGER},
+      cd_zdgj_bfs = #{cdZdgjBfs,jdbcType=INTEGER},
+      cd_yksl_cs = #{cdYkslCs,jdbcType=INTEGER},
+      cd_yksl_rs = #{cdYkslRs,jdbcType=INTEGER},
+      cd_yksl_bfs = #{cdYkslBfs,jdbcType=INTEGER},
+      cd_yzqd_cs = #{cdYzqdCs,jdbcType=INTEGER},
+      cd_yzqd_rs = #{cdYzqdRs,jdbcType=INTEGER},
+      cd_yzqd_bfs = #{cdYzqdBfs,jdbcType=INTEGER},
+      kt_bzl_cs = #{ktBzlCs,jdbcType=INTEGER},
+      kt_bzl_rs = #{ktBzlRs,jdbcType=INTEGER},
+      kt_bzl_bfs = #{ktBzlBfs,jdbcType=INTEGER},
+      kt_bzr_cs = #{ktBzrCs,jdbcType=INTEGER},
+      kt_bzr_rs = #{ktBzrRs,jdbcType=INTEGER},
+      kt_bzr_bfs = #{ktBzrBfs,jdbcType=INTEGER},
+      kt_bkj_cs = #{ktBkjCs,jdbcType=INTEGER},
+      kt_bkj_rs = #{ktBkjRs,jdbcType=INTEGER},
+      kt_bkj_bfs = #{ktBkjBfs,jdbcType=INTEGER},
+      kt_yzy_cs = #{ktYzyCs,jdbcType=INTEGER},
+      kt_yzy_rs = #{ktYzyRs,jdbcType=INTEGER},
+      kt_yzy_bfs = #{ktYzyBfs,jdbcType=INTEGER},
+      kt_zrxgc_cs = #{ktZrxgcCs,jdbcType=INTEGER},
+      kt_zrxgc_rs = #{ktZrxgcRs,jdbcType=INTEGER},
+      kt_zrxgc_bfs = #{ktZrxgcBfs,jdbcType=INTEGER},
+      kt_zlxgc_cs = #{ktZlxgcCs,jdbcType=INTEGER},
+      kt_zlxgc_rs = #{ktZlxgcRs,jdbcType=INTEGER},
+      kt_zlxgc_bfs = #{ktZlxgcBfs,jdbcType=INTEGER},
+      kt_zdkgj_cs = #{ktZdkgjCs,jdbcType=INTEGER},
+      kt_zdkgj_rs = #{ktZdkgjRs,jdbcType=INTEGER},
+      kt_zdkgj_bfs = #{ktZdkgjBfs,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
