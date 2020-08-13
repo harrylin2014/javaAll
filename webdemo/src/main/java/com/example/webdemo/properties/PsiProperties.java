@@ -11,4 +11,6 @@ import org.springframework.stereotype.Component;
 public class PsiProperties {
 
     private String url;
+    private String name;
+
 }
