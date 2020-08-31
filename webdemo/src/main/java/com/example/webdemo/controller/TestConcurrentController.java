@@ -6,6 +6,7 @@ import com.example.webdemo.model.ResultData;
 import com.example.webdemo.properties.PsiProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.Assert;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -42,5 +43,6 @@ public class TestConcurrentController {
         ResultData resultData = new ResultData();
         return resultData;
     }
+
 
 }

@@ -15,7 +15,8 @@ private static String url =  "http://hccapi.haier.net:10073/";
 
 public static void main(String args[]){
     //String address = "山东省青岛市崂山区中韩街道海尔路1号海尔工业园s座";
-    String address = "广西壮族自治区百色市田阳区百育镇九合村濑觉屯5组1号";
+    //String address = "江西省抚州市资溪县林肥厂附近";
+    String address = "陕西省西安市雁塔区丈八街道龙旗科技园";
     String id = UUID.randomUUID().toString();//生成随机数的区域id
     String param = "{\"id\":\"" + id + "\",\"address\":\"" + address.replace(" ", "") + "\"}";
     String addresses = URLEncoder.encode(param);//url中有汉字或特殊字符(非字母和数字的字符)，实现 转码
