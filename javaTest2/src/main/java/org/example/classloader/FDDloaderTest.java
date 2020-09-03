@@ -10,6 +10,7 @@ public class FDDloaderTest {
         ClassLoader loader = FDD.class.getClassLoader();
 
     System.out.println(loader.getResource(""));
+    System.out.println(loader.getResource("org/example/classloader/FDD.class"));
     //一、 使用ClassLoader.loadClass()来加载类，不会执行初始化块
         loader.loadClass("org.example.classloader.FDD");
     //loader.loadClass(loader.getResource("")+"org/example/classloader/FDD");
