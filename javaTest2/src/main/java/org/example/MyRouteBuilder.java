@@ -24,5 +24,8 @@ public class MyRouteBuilder extends RouteBuilder {
                     .log("Other message")
                     .to("file:target/messages/others");
     }
+    public static void main(String args[]){
+
+    }
 
 }

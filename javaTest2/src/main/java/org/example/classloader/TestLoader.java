@@ -8,6 +8,9 @@ public class TestLoader {
 
     public static void main(String args[]){
 
+
+        System.out.println(System.currentTimeMillis());
+
         //系统加载器，或者应用加载器
         System.out.println(Thread.currentThread().getContextClassLoader());
 
