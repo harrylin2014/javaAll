@@ -24,6 +24,7 @@ public class TestCaffeineController {
     public String createCache(){
         userInfoService.createUser();
 
+
         return "success";
     }
 
