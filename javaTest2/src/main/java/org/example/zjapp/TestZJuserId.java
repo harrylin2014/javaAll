@@ -188,7 +188,8 @@ public class TestZJuserId {
             JSONObject responseJson = (JSONObject) JSONObject.parse(response);
             if ("00000".equals(responseJson.getString("retCode"))) {
                 JSONObject uidJson = (JSONObject) JSONObject.parse(responseJson.getString("payload"));
-
+                String uid = uidJson.getString("uHomeUserId");
+                logger.error("uid："+uid);
             } else {
 
                 logger.error("调用智家接口获取智家id失败： " + responseJson.getString("retInfo"));
