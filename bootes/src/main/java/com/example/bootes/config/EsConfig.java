@@ -19,10 +19,10 @@ public class EsConfig {
 
     @Bean
     public TransportClient client() throws UnknownHostException {
-        String hostName = "47.105.235.103";
+        String hostName = "10.190.180.127";
         int port=9300;
         String clusterName = "cluster.name";
-        String nodeName = "docker-cluster";
+        String nodeName = "elasticsearch";
         TransportAddress transportAddress = new TransportAddress(InetAddress.getByName(hostName), port);
         Settings settings = Settings.builder().put(clusterName, nodeName).build();
         TransportClient client = new PreBuiltTransportClient(settings);

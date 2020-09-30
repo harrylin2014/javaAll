@@ -1,0 +1,65 @@
+前言
+Flux 和 Mono 是 Reactor 中的两个基本概念。Flux 表示的是包含 0 到 N 个元素的异步序列。在该序列中可以包含三种不同类型的消息通知：正常的包含元素的消息、序列结束的消息和序列出错的消息。当消息通知产生时，订阅者中对应的方法onNext(), onComplete()和 onError()会被调用。Mono 表示的是包含 0 或者 1 个元素的异步序列。该序列中同样可以包含与 Flux 相同的三种类型的消息通知。Flux 和 Mono 之间可以进行转换。对一个 Flux 序列进行计数操作，得到的结果是一个 Mono<Long>对象。把两个 Mono 序列合并在一起，得到的是一个 Flux 对象。相对Flux，Mono可能稍微简单一点，本章将从Mono的创建入手，开始Reactor之旅。
+
+本章概要
+1、通过Mono静态方法创建：
+empty()：创建一个不包含任何元素，只发布结束消息的序列。
+just()：可以指定序列中包含的全部元素。创建出来的 Mono序列在发布这些元素之后会自动结束。
+justOrEmpty()：从一个 Optional 对象或可能为 null 的对象中创建 Mono。只有 Optional 对象中包含值或对象不为 null 时，Mono 序列才产生对应的元素。
+error(Throwable error)：创建一个只包含错误消息的序列。
+never()：创建一个不包含任何消息通知的序列。
+fromCallable()、fromCompletionStage()、fromFuture()、fromRunnable()和 fromSupplier()：分别从 Callable、CompletionStage、CompletableFuture、Runnable 和 Supplier 中创建 Mono。
+delay(Duration duration)和 delayMillis(long duration)：创建一个 Mono 序列，在指定的延迟时间之后，产生数字 0 作为唯一值。
+2、通过Mono动态方法创建：
+通过 create()方法来使用 MonoSink 来创建 Mono。
+
+静态方法示例
+1、empty()：创建一个不包含任何元素，只发布结束消息的序列：
+Mono.empty().subscribe(System.out::println);
+
+2、just()：可以指定序列中包含的全部元素。创建出来的 Mono序列在发布这些元素之后会自动结束。
+Mono.just("foo").subscribe(System.out::println);
+
+3、justOrEmpty()：从一个 Optional 对象或可能为 null 的对象中创建 Mono。只有 Optional 对象中包含值或对象不为 null 时，Mono 序列才产生对应的元素。
+Mono.justOrEmpty(null).subscribe(System.out::println);
+Mono.justOrEmpty("justOrEmpty1").subscribe(System.out::println);
+Mono.justOrEmpty(Optional.of("justOrEmpty2")).subscribe(System.out::println);
+
+4、error(Throwable error)：创建一个只包含错误消息的序列。
+Mono.error(newRuntimeException("error")).subscribe(System.out::println, System.err::println);
+
+5、never()：创建一个不包含任何消息通知的序列。
+Mono.never().subscribe(System.out::println);
+
+6、fromCallable()、fromCompletionStage()、fromFuture()、fromRunnable()和 fromSupplier()：分别从 Callable、CompletionStage、CompletableFuture、Runnable 和 Supplier 中创建 Mono。
+//通过fromRunnable创建，并实现异常处理
+Mono.fromRunnable(() -> {
+System.out.println("thread run");
+throw new RuntimeException("thread run error");
+}).subscribe(System.out::println, System.err::println);
+
+//通过fromCallable创建
+Mono.fromCallable(() -> "callable run ").subscribe(System.out::println);
+
+//通过fromSupplier创建
+Mono.fromSupplier(() -> "create from supplier").subscribe(System.out::println);
+7、delay(Duration duration)和 delayMillis(long duration)：创建一个 Mono 序列，在指定的延迟时间之后，产生数字 0 作为唯一值。
+longstart = System.currentTimeMillis();
+Disposable disposable = Mono.delay(Duration.ofSeconds(2)).subscribe(n -> {
+System.out.println("生产数据源："+ n);
+System.out.println("当前线程ID："+ Thread.currentThread().getId() + ",生产到消费耗时："+ (System.currentTimeMillis() - start));
+});
+System.out.println("主线程"+ Thread.currentThread().getId() + "耗时："+ (System.currentTimeMillis() - start));
+while(!disposable.isDisposed()) {
+}
+Note：
+
+通过以上测试打印，可以发现消费延迟2S后发生在异步线程，通过Disposable获取消费状态，阻塞主线程至消费完成。
+
+
+动态方法示例
+1、通过 create()方法来使用 MonoSink 来创建 Mono。
+Mono.create(sink -> sink.success("create MonoSink")).subscribe(System.out::println);
+
+
+总结：以上仅仅是创建Mono实例的部分案例，还有更多方法会在后续进行逐步展开应用。
