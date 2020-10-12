@@ -1,4 +1,4 @@
-package org.example.lambdatest;
+package org.example.java8;
 
 /**
  * @author lxl
