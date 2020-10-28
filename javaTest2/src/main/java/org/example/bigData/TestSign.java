@@ -14,11 +14,11 @@ public class TestSign {
 
     public static void main(String[] args) throws MalformedURLException {
         String body = "{\n" +
-                "\t\"userId\":\"2034409031\",\n" +
+                "\t\"userId\":\"2009092343\",\n" +
                 "\t\"pageNum\":1,\n" +
                 "\t\"pageSize\":100\n" +
                 "}";
-        String sing = getSign("MB-UZHCC-0001","6dfca8714eb26e3a226t88a1573c8768","1602836154000",body,"http://10.159.59.53:7170/bigdata-operate-rest/operator/sale/order");
+        String sing = getSign("MB-UZHCC-0001","6dfca8714eb26e3a226t88a1573c8768","1603865316000",body,"http://10.159.59.53:7170/bigdata-operate-rest/operator/sale/order");
 
         System.out.println(sing);
     }

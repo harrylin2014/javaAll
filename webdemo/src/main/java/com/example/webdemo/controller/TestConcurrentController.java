@@ -4,9 +4,11 @@ package com.example.webdemo.controller;
 import com.example.webdemo.annotion.LimitKey;
 import com.example.webdemo.model.ResultData;
 import com.example.webdemo.properties.PsiProperties;
+import com.example.webdemo.properties.TestProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -42,6 +44,16 @@ public class TestConcurrentController {
         System.out.println(param);
         ResultData resultData = new ResultData();
         return resultData;
+    }
+
+    @GetMapping("/testnull")
+    public ResultData testParamNull(String token){
+
+        System.out.println("1:"+TestProperties.hccUrl);
+        System.out.println("token:"+token);
+        System.out.println(StringUtils.isEmpty(token));
+
+        return new ResultData();
     }
 
 
