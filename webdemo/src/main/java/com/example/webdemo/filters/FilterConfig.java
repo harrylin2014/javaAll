@@ -11,16 +11,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FilterConfig {
 
-    @Bean
-    public FilterRegistrationBean registrationBean(){
-
-        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
-        filterRegistrationBean.setFilter(new logFilter());
-        filterRegistrationBean.addUrlPatterns("/*");
-        filterRegistrationBean.setName("log");
-        filterRegistrationBean.setOrder(1);
-        return filterRegistrationBean;
-
-    }
+//    @Bean
+//    public FilterRegistrationBean registrationBean(){
+//
+//        FilterRegistrationBean filterRegistrationBean = new FilterRegistrationBean();
+//        filterRegistrationBean.setFilter(new logFilter());
+//        filterRegistrationBean.addUrlPatterns("/*");
+//        filterRegistrationBean.setName("log");
+//        filterRegistrationBean.setOrder(1);
+//        return filterRegistrationBean;
+//
+//    }
 
 }

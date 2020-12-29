@@ -56,8 +56,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .exceptionHandling().authenticationEntryPoint(authenticationEntryPoint)
                 .accessDeniedHandler(accessDeniedHandler)
                 .and()
-                //通过设置SecurityContextRepository加载SecurityContext
-                //.securityContext().securityContextRepository()
                 .authorizeRequests()
                 .antMatchers("/user/login").anonymous()
                 .anyRequest().authenticated();
