@@ -14,7 +14,7 @@ public class HyzxJdlbs {
 
     public static void main(String args[]) throws IOException {
 
-        String sAccessUrl = "http://vipcent.haier.net/vipcenter/productOrderApi/queryUserRegProductDistinct";
+        String sAccessUrl = "http://vipcent.abcd.net/vipcenter/productOrderApi/queryUserRegProductDistinct";
         JSONObject paramStr = new JSONObject();
         paramStr.put("userId", "2047861079"); //用户Id
         paramStr.put("source", "all");//来源默认all

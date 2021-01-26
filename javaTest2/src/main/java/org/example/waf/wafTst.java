@@ -12,7 +12,7 @@ public class wafTst {
         System.out.println(System.currentTimeMillis());
 
         for(int i=0;i<201;i++){
-            HttpUtil.get("https://haierservice.haier.net/entranceapi/version/getCurrVer");
+            HttpUtil.get("https://abcdservice.abcd.net/entranceapi/version/getCurrVer");
         }
 
         System.out.println(System.currentTimeMillis());

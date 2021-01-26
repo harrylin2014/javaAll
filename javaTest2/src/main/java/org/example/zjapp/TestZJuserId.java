@@ -166,7 +166,7 @@ public class TestZJuserId {
         }
         return result;
     }
-    private  static String getUhomeUserIdUrl  = "https://uws.haier.net/ucs/uia/find/uhome-userId"; //通过PSI用户中心的用户ID和UHome的systemId获取UHome的用户ID的服务。
+    private  static String getUhomeUserIdUrl  = "https://uws.abcd.net/ucs/uia/find/uhome-userId"; //通过PSI用户中心的用户ID和UHome的systemId获取UHome的用户ID的服务。
     private static String uhomeAppId = "SV-SHFW660-0000";
     private static String uhomeAppKey = "f654561eb10f0964185ae7bf73533899";
     public static void main(String args[]){

@@ -8,7 +8,7 @@ public class TestException {
 
     public static void main(String args[]){
 
-        Assert.notNull(null,"no null object");
+        //Assert.notNull(null,"no null object");
 
            System.out.println(geti()+"");
 
