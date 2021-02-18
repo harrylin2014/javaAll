@@ -1,7 +1,12 @@
 package org.example;
 
 import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.text.StrSpliter;
 import org.apache.commons.lang3.StringUtils;
+
+import java.time.LocalDateTime;
+import java.time.ZoneOffset;
+import java.util.Date;
 
 /**
  * @author lxl
@@ -10,7 +15,22 @@ import org.apache.commons.lang3.StringUtils;
 public class TestZS {
     public static void main(String args[]){
 
-        System.out.println( StringUtils.contains("picture/202010291048037164058.HEI",".HEIC"));
+
+        String str1 = "1612586644413";
+
+        LocalDateTime localDateTime = new Date(1535444725000L).toInstant().atOffset(ZoneOffset.of("+8")).toLocalDateTime();
+
+        //System.out.println(localDateTime.);
+
+        //System.out.println( StringUtils.contains("picture/202010291048037164058.HEI",".HEIC"));
+        String str = "整机延长至10年";
+
+        int i = str.indexOf("年");
+        String s = str.substring(0,i+1);
+        String l = str.substring(i+1,str.length());
+
+        System.out.println( s+"-"+l);
+
 
 
 
