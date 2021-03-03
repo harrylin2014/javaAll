@@ -14,6 +14,9 @@ public class Md5Test {
         System.out.println(str.length());
 
 
+        System.out.println("测试回退");
+
+
         System.out.println( SecureUtil.md5("DeV80jP6K17RpFlAYgt25utIVDT8H3Lf"+"nCJvUI9DqF8i5fVx"+"1610601241194"));
 
         System.out.println( SecureUtil.md5("nCJvUI9DqF8i5fVx"+"DeV80jP6K17RpFlAYgt25utIVDT8H3Lf"+"1610523149711"));
