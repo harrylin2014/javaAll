@@ -18,8 +18,8 @@ import javax.annotation.Resource;
 @RequestMapping("/user")
 public class TestController {
 
-    @Resource
-    AuthenticationManager authenticationManager;
+//    @Resource
+//    AuthenticationManager authenticationManager;
 
     @GetMapping("/test")
     @ResponseBody
@@ -37,14 +37,14 @@ public class TestController {
     @ResponseBody
     public String login(String userName,String password){
 
-        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userName,password);
-
-        try{
-            Authentication authentication = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
-            SecurityContextHolder.getContext().setAuthentication(authentication);
-        }catch (AuthenticationException e){
-            return "error";
-        }
+//        UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userName,password);
+//
+//        try{
+//            Authentication authentication = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
+//            SecurityContextHolder.getContext().setAuthentication(authentication);
+//        }catch (AuthenticationException e){
+//            return "error";
+//        }
 
 
         return "success";
