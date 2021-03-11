@@ -40,6 +40,15 @@ public class ApiEncryptKit {
     private static Charset CHARSET = Charset.forName("utf-8");
     private static int BLOCK_SIZE = 32;
 
+    public static void main(String[] args) {
+        String  test = ApiEncryptKit.encrypt("fdfsdfsd","vipRequestKey","vipAppName");
+
+        System.out.println("test:"+test);
+
+        System.out.println("result:"+ApiEncryptKit.decrypt(test,"vipRequestKey","vipAppName"));
+
+    }
+
     /**
      * 对明文进行加密.
      * @param text 需要加密的明文
