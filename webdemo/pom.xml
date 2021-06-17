@@ -71,11 +71,17 @@
             <groupId>com.github.ben-manes.caffeine</groupId>
             <artifactId>caffeine</artifactId>
         </dependency>
-<!--        <dependency>
-            <groupId>org.springframework.security.experimental</groupId>
-            <artifactId>spring-security-oauth2-authorization-server</artifactId>
-            <version>0.0.1</version>
-        </dependency>-->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.4.4</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--        <dependency>
+                    <groupId>org.springframework.security.experimental</groupId>
+                    <artifactId>spring-security-oauth2-authorization-server</artifactId>
+                    <version>0.0.1</version>
+                </dependency>-->
 
 
     </dependencies>
